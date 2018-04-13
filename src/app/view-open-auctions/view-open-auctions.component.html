@@ -1,0 +1,13 @@
+<p>Testing</p>
+<ul *ngIf="categories[0] as root">
+    <li *ngFor="let index_0 of root.children">{{categories[index_0].name}}
+        <ul *ngIf="categories[index_0].children as children">
+            <li *ngFor="let index_1 of children">{{categories[index_1].name}}
+                <ul *ngIf="categories[index_1].children as grandchildren">
+                    <li *ngFor="let index_2 of grandchildren">{{categories[index_2].name}}</li>
+                </ul>
+            </li>                
+        </ul>
+    </li>
+</ul>
+
